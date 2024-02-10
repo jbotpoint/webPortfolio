@@ -1,0 +1,53 @@
+{% extends 'weather.html' %}
+
+{% block head %}
+<div>
+    <p class ="textStyling">Is {{ condition }} with a temperature of {{ currentTemp }} Celcius.</p>
+    <style>
+        .hidden
+        {
+            opacity: 0;
+        }
+        .appear
+        {
+            opacity: 1;
+        }
+        .weatherImages
+        {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .sun
+        {
+            opacity: 0;
+            transition-property: opacity, left;
+            transition-duration: .3s, 1s;
+            transition-delay: 0, .3s;
+            position: absolute;
+            z-index: -1; 
+            left: 0%;
+        }
+    </style>
+    <div class="weatherImages">
+        <script>
+            function sunAnimate()
+            {
+                const sunObj = document.getElementsByClassName("sun")[0];
+                sunObj.style.opacity = 1;
+                sunObj.style.left = "31%";
+            }
+            function checkCondition()
+            {
+                if("{{ condition }}" === "Overcast")
+                {
+                    
+                }
+            }
+            </script>
+        <img class="sun" src="{{url_for('static', filename='/images/sun.png')}}" onload="sunAnimate()">
+    </div>
+</div>
+
+
+{% endblock %}

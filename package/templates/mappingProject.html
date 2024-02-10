@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(131, 182, 146);">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Jbotpoint's Website</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <ul class="navbar matlasActive">
+            <li class="navbar"><a class="navbar" href="/">Home</a></li>
+            <li class="navbar"><a class="navbar" href="/about">About</a></li>
+            <li class="navbar"><a class="navbar" href="/notesandlinks">Links</a></li>
+        </ul>
+        <main>
+            <h1 align="center" class="title" top="0">
+                        Matlas
+            </h1>
+            <div align="center" class="about-div" style="font-size: 2vw;">
+                <p class="textStyling" style="height: 35vh;">
+                    Matlas is a student mapping project using the OSM database with extra features such as:<br>
+                    Bike share stations from the CityBikes API<br>
+                    Weather information from the OpenWeather API<br>
+                    and multi-point path finding using A*, Dikjras, and Edge Swapping.<br><br>
+                    Written entirely in C++.
+                </p>
+            </div>
+            <section>
+                <div class="matlas">
+                    <img src="{{url_for('static', filename='/images/matlas.png')}}" align="middle" style="width: 50%; height: 50%;"/>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

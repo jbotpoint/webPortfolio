@@ -1,0 +1,286 @@
+/************************************
+ACTIVE -> NAVBAR
+*************************************/
+li.active
+{
+    background-color: rgb(160, 108, 213);
+}
+
+/************************************
+NAVBAR CLASS
+*************************************/
+ul.navbar 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(98, 71, 170);
+    z-index: 100;
+}
+ul.matlasActive
+{
+    background-color: rgb(6, 39, 38);
+}
+li.navbar
+{
+    float:left;
+    margin: 0;
+    padding: 0;
+}
+a.navbar
+{
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+a.navbar:hover
+{
+    background-color: black;
+}
+/************************************
+ROW
+*************************************/
+.row
+{
+    position: relative;
+    left: 10%;
+    display: block;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    width: 90%;
+}
+.row2
+{
+    position: relative;
+    display: block;
+    float: inline-end;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    width: 90%;
+}
+.row::after
+{
+    content: "";
+    clear: both;
+}
+/************************************
+IMAGE CONTAINER
+*************************************/
+.column
+{
+    text-decoration: none;
+    color: black;
+    float: left;
+    width: 25%;
+    padding: 1%;
+    margin: 1%;
+    position: relative;
+    justify-content: center;
+    vertical-align: center;
+    align-items: center;
+    text-align: center;
+}
+.imageContainer
+{
+    position: relative;
+    text-align: center;
+}
+.column a:visited
+{
+    color: black;
+    text-decoration: none;
+}
+img.column
+{
+    width: 100%;
+}
+.column img
+{
+    opacity: 0.8;
+    filter: blur(3px);
+    transition: .2s;
+}
+.column:hover img
+{
+    background-color:  white;
+    opacity: 1;
+    translate: -1vw -1vw;
+    filter: blur(0);
+    transition: .3s; 
+}
+.column:hover .text_on_image
+{
+    translate: -1vw -1vw;
+    transition: .3s;
+    opacity: 100%;
+}
+.column:hover .behindImage
+{
+    box-shadow: 0 0 30px rgb(98, 60, 160);
+    transition: .3s;
+}
+.text_on_image
+{
+    color: white;
+    transition: .2s;
+    z-index: 10;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 33%;
+    right: .1vw;
+    position: absolute;
+    font-size: 1.5vw;
+    text-decoration: none;
+    text-shadow:    0 -2px 3px rgb(6, 39, 38),
+                    0 -1px 1px rgb(6, 39, 38),
+                    0 0px 0px rgb(6, 39, 38),
+                    0 1px 1px rgb(6, 39, 38),
+                    0 2px 2px rgb(6, 39, 38),
+                    0 3px 3px rgb(6, 39, 38);
+}
+.index_images
+{
+    height: 20vw;
+    width: 20vw;
+    border: 1vh;
+    border-color: rgb(98, 71, 170);
+    border-radius: 50%;
+    object-fit: cover;
+}
+.behindImage
+{
+    position: absolute;
+    border-radius: 50%;
+    border: 1vh;
+    height: 20vw;
+    width: 20vw;
+    right: 1.9vw;
+    background-color: rgb(98, 71, 170);
+}
+/************************************
+Title
+*************************************/
+.title
+{ 
+    color: white;
+    font-family: sans-serif;
+    font-size: 10vw;
+    text-shadow: 
+      -1px -1px 1px #efede3, 
+      0px 1px 0 rgb(6, 70, 70), 
+      0px 2px 0 rgb(6, 66, 66), 
+      0px 3px 0 rgb(6, 64, 64), 
+      0px 4px 0 rgb(6, 62, 62), 
+      0px 5px 0 rgb(6, 60, 60), 
+      0px 6px 0 rgb(6, 58, 58), 
+      0px 7px 0 rgb(6, 56, 56), 
+      0px 8px 0 rgb(6, 54, 54), 
+      0px 9px 0 rgb(6, 52, 52), 
+      0px 10px 0 rgb(6, 50, 50), 
+      0px 11px 0 rgb(6, 47, 46), 
+      0px 12px 0 rgb(6, 45, 44), 
+      0px 13px 0 rgb(6, 43, 42), 
+      0px 14px 0 rgb(6, 41, 40), 
+      0px 15px 0 rgb(6, 39, 38),
+      2px 20px 5px rgba(6, 30, 30, 0.9),
+      5px 23px 5px rgba(6, 30, 30, 0.3),
+      8px 27px 8px rgba(6, 30, 30, 0.5),
+      8px 28px 35px rgba(6, 30, 30, 0.9);
+}
+.titleContainer
+{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+}
+.textStyling
+{
+    color: white;
+    font-family: sans-serif;
+    text-shadow: 
+      -1px -1px 1px #efede3, 
+      0px 1px 0 rgb(6, 70, 70), 
+      0px 2px 0 rgb(6, 66, 66), 
+      0px 3px 0 rgb(6, 64, 64), 
+      0px 4px 0 rgb(6, 62, 62), 
+      0px 5px 0 rgb(6, 60, 60), 
+      0px 6px 0 rgb(6, 58, 58), 
+      0px 7px 0 rgb(6, 56, 56), 
+      0px 8px 0 rgb(6, 54, 54), 
+      0px 6px 5px rgba(6, 30, 30, 0.9),
+      0px 7px 5px rgba(6, 30, 30, 0.3),
+      0px 8px 8px rgba(6, 30, 30, 0.5),
+      0px 9px 35px rgba(6, 30, 30, 0.9);
+}
+.about-div
+{
+    color: white;
+}
+/************************************
+linkTable
+*************************************/
+.linkTable
+{
+    width: 100vw;
+    height: 30%;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    position: absolute;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1vw;
+    background-color: rgb(98, 71, 170);
+    color: white;
+}
+.linkTable td
+{
+    width: 30%;
+    text-align: center;
+}
+.linkTable a
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+}
+/************************************
+linkImage
+*************************************/
+.linkImage
+{
+    object-fit: cover;
+    height: 20vh;
+}
+
+.matlas
+{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+}
+.cityName
+{
+    font-size: 10vw;
+    opacity: 100;
+    color: white;
+}

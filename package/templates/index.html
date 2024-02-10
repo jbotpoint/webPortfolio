@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html style="background-color: rgb(226, 207, 234);">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jbotpoint's Website</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <ul class="navbar">
+      <li class="navbar active"><a class="navbar" href="/">Home</a></li>
+      <li class="navbar"><a class="navbar" href="about">About</a></li>
+      <li class="navbar"><a class="navbar" href="/notesandlinks">Links</a></li>
+    </ul>
+    <main>
+        <div class="titleContainer"><h1 align="middle" class ="title">The Workshop</h1></div>
+        <h2 align="middle" class="textStyling" style="font-size: 5vw;">Apps and Projects</h2>
+        <section height="50vh">
+          <!--  row of images -->
+          <div class="row">
+            <div class="column">
+              <a href = "https://github.com/jbotpoint">
+                <div class="behindImage"></div>
+                <div class="imageContainer"><img src="{{url_for('static', filename='/images/jbotpointgithub.png')}}" align="middle" class="index_images" width = 100%/></div>
+                <div class="text_on_image">
+                  Link to my github for viewing <br>
+                  my public projects!
+                </div>  
+              </a>
+            </div><!-- close column -->
+            <div class="column">
+              <a href = "matlas">
+                <div class="behindImage"></div>
+                <div class="imageContainer"><img src="{{url_for('static', filename='/images/matlas.png')}}" align="middle" class="index_images"  width = 100%/></div>
+                <div class="text_on_image">A student mapping project:<br> <p style="font-size: 2vw;">Matlas</p></div>  
+              </a>
+            </div><!-- close column -->
+            <div class="column">
+              <a href = "about">
+                <div class="behindImage"></div>
+                <div class="imageContainer"><img src="{{url_for('static', filename='/images/Waterguy_irl.jpg')}}" align="middle" class="index_images" width = 100%/></div>
+                <div class="text_on_image">App2</div>  
+              </a>
+            </div><!-- close column -->
+          </div>
+        </section>
+        <section>
+          <div class="row2">
+            <div class="column">
+              <a href = "weather">
+                <div class="behindImage"></div>
+                <div class="imageContainer"><img src="{{url_for('static', filename='/images/weather.jpg')}}" align="middle" class="index_images" width = 100%/></div>
+                <div class="text_on_image">
+                  A weather page for testing<br>
+                  input and output using <br> Flask and APIs!
+                </div>  
+              </a>
+            </div><!-- close column -->
+          </div>
+        </section>
+        </main>
+        <script src="index.js"></script>
+      </body>
+      </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(163, 228, 227);">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Jbotpoint's Website</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <ul class="navbar" style="background-color: rgb(0, 86, 143);">
+            <li class="navbar"><a class="navbar" href="/">Home</a></li>
+            <li class="navbar"><a class="navbar" href="/about">About</a></li>
+            <li class="navbar"><a class="navbar" href="/notesandlinks">Links</a></li>
+        </ul>
+        <main>
+            <h1 align="center" class="title" top="0">
+                        {{ title }}
+            </h1>
+            <div align="center" class="weatherInput">
+                <form action="" method="POST">
+                    <label for="fcity">Please input a city</label><br>
+                    <input type="text" class="cityInputField" id="fcity" name="city">
+                </form>
+                <div>
+                    {% block head %}
+                    {% endblock %}
+                </div>
+            </div>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
