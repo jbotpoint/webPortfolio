@@ -21,31 +21,33 @@
         .sun
         {
             opacity: 0;
-            transition-property: opacity, left;
-            transition-duration: .3s, 1s;
-            transition-delay: 0, .3s;
+            transition-property: opacity, left, top;
+            transition-duration: .3s, 1s, 1s;
+            transition-delay: 0, .3s, .3s;
+            transition-timing-function: linear, ease, ease;
             position: absolute;
             z-index: -1; 
             left: 0%;
+            top: -10vh;
         }
     </style>
     <div class="weatherImages">
+        <img class="sun" src="{{url_for('static', filename='/images/sun.png')}}" onload="checkCondition('{{ conditionCode }}')">
+
         <script>
             function sunAnimate()
             {
                 const sunObj = document.getElementsByClassName("sun")[0];
                 sunObj.style.opacity = 1;
-                sunObj.style.left = "31%";
+                sunObj.style.left = "50%";
+                sunObj.style.top = "-50vh";
             }
-            function checkCondition()
+            function checkCondition(conditionCode)
             {
-                if("{{ condition }}" === "Overcast")
-                {
-                    
-                }
+                console.log(conditionCode);
+                sunAnimate();
             }
-            </script>
-        <img class="sun" src="{{url_for('static', filename='/images/sun.png')}}" onload="sunAnimate()">
+        </script>
     </div>
 </div>
 

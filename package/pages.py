@@ -29,6 +29,6 @@ def weather():
         cityName = request.form["city"]
         response = handleAPIs.getWeather(cityName)
         if(response != False):
-            responseList = [response['current']['temp_c'], response['current']['condition']['text']]
-            return render_template("weatherExtends.html", title=cityName, currentTemp=responseList[0], condition=responseList[1])
+            responseList = [response['current']['temp_c'], response['current']['condition']['text'], response['current']['condition']['code']]
+            return render_template("weatherExtends.html", title=cityName, currentTemp=responseList[0], condition=responseList[1], conditionCode=responseList[2])
     return render_template("weather.html", title="Weather")

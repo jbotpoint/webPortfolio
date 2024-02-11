@@ -2,7 +2,6 @@
 from flask import Flask
 
 from package import pages
-from package import app
 
 def create_app():
     app = Flask(__name__)
